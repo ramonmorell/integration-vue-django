@@ -1,0 +1,12 @@
+{
+    "message": "hello i18n !!",
+    "NAVBAR": {
+        "INICIO": "HOME",
+        "PROYECTOS": "PROJECTS",
+        "WORKSHOP": "WORKSHOP"
+    },
+    "LANGUAGE": {
+        "es": "Español",
+        "en": "English"
+    }
+}
