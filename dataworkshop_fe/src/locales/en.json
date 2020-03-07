@@ -8,5 +8,12 @@
     "LANGUAGE": {
         "es": "Español",
         "en": "English"
+    },
+    "PROJECTS": {
+        "ID": "id",
+        "NAME": "Name",
+        "DESCRIPTION": "Description",
+        "SHOW": "Show",
+        "RESULTS": "Results"
     }
 }
