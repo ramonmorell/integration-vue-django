@@ -128,6 +128,7 @@ STATICFILES_DIRS = (
     os.path.join(FRONTEND_DIR, 'dist'),
     # os.path.join(FRONTEND_DIR, 'dist'),
     # os.path.join(FRONTEND_DIR, 'static'),
+    # os.path.join(FRONTEND_DIR, 'public'),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')

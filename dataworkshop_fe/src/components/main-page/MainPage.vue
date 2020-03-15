@@ -2,6 +2,7 @@
     <div class="container">
         <Navbar />
         <div class="container"><router-view></router-view></div>
+        <!-- <img src="/static/text.jpg" /> -->
     </div>
 </template>
 

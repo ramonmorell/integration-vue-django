@@ -32,13 +32,13 @@
                         <td class="col-3 col-md-2">
                             <div class="col-md-12">
                                 <button
-                                    class="btn btn-outline-primary col-sm-12"
+                                    class="btn btn-outline-primary col-sm-12 margin-custom"
                                 >
                                     {{ $t('PROJECTS.SHOW') }}
                                 </button>
                                 <button
                                     type="button"
-                                    class="btn btn-outline-success col-sm-12"
+                                    class="btn btn-outline-success col-sm-12 margin-custom"
                                 >
                                     {{ $t('PROJECTS.RESULTS') }}
                                 </button>
@@ -65,4 +65,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.margin-custom {
+    margin-top: 10px;
+}
+</style>
