@@ -13,6 +13,11 @@ yarn install
 # Iniciar el proyecto
 yarn serve
 yarn build
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser --email admin@dataworkshop.com --username admin
+
 python manage.py runserver
 
 
