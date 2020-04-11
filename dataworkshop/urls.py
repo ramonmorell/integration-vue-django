@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +27,4 @@ urlpatterns = [
          ),
     path('api/', include("dataworkshop_be.urls"))
 ]
+urlpatterns += staticfiles_urlpatterns()
