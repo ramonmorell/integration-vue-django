@@ -1,40 +1,59 @@
-# Crear entorno
+###### ------ DEV ENV ------ ######
+
+# Create virtual environment
 python -m venv venv
 
-# Desde el virtual environment
+# From virtual environment
 pip install -r requirements.txt
 
-# Para guardas las dependencias
+# To save dependencies
 pip freeze > requirements.txt
 
-# Instalar front end
+# Intall front end
 yarn install
 
-# Iniciar el proyecto
+# Start front end project
 yarn serve
 yarn build
 
+# Start Django project
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser --email admin@dataworkshop.com --username admin
 
+# Run django server
 python manage.py runserver
 
-
-# DEPLOY in UBUNTU
+###### ------ DEPLOY in UBUNTU 18.04 ------ ######
 
 apt-get update
-
 apt-get install python3
 apt-get install python3-venv
 
 python3 -m venv venv (create virtual environment)
 source venv/bin/activate (acivate virtual environment at venv folder)
 pip3 install -r requirements.txt
-python manage.py collectstatic
 pip install gunicorn
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser --email admin@dataworkshop.com --username admin
+
+# Install nodejs and yarn lastest version
+# At dataworkshop_fe
+yarn install
+yarn build
+
+# test unicorn
 gunicorn dataworkshop.wsgi:application
 gunicorn dataworkshop.wsgi:application --bind 0.0.0.0:8000
+
+# unicorn and nginx
+ln -s /home/dataworkshop/systemd/gunicorn.service /home/dataworkshop/systemd/gunicorn.socket /etc/systemd/system
+# Add server to nginx default (nginx-default at systemd folfer)
+systemctl enable --now gunicorn.socket
+systemctl start gunicorn
+
 
 
 
