@@ -21,3 +21,22 @@ python manage.py createsuperuser --email admin@dataworkshop.com --username admin
 python manage.py runserver
 
 
+# DEPLOY in UBUNTU
+
+apt-get update
+
+apt-get install python3
+apt-get install python3-venv
+
+python3 -m venv venv (create virtual environment)
+source venv/bin/activate (acivate virtual environment at venv folder)
+pip3 install -r requirements.txt
+python manage.py collectstatic
+pip install gunicorn
+gunicorn dataworkshop.wsgi:application
+gunicorn dataworkshop.wsgi:application --bind 0.0.0.0:8000
+
+
+
+
+
